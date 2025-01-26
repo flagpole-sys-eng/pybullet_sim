@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<robot name="flagpole">
+
+  <!-- ========================
+       BASE LINK
+  ========================= -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.2916666666666668 8.100670728132436e-18 0.02196616591181604" rpy="0 0 0"/>
+      <mass value="17.627017931053384"/>
+      <inertia ixx="0.032096" iyy="0.100153" izz="0.1195" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ========================
+       POLE LINK
+  ========================= -->
+  <link name="pole_1">
+    <inertial>
+      <origin xyz="3.3333333299134793e-07 -0.008332999999999991 0.3849880544949187" rpy="0 0 0"/>
+      <mass value="2.6687236447362888"/>
+      <inertia ixx="0.05149" iyy="0.05149" izz="0.00102" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.291667 -0.008333 -0.071667" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/pole_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.291667 -0.008333 -0.071667" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/pole_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ========================
+       TOP-LEFT WHEEL LINK
+  ========================= -->
+  <link name="tl_wheel_1">
+    <inertial>
+      <origin xyz="-3.33333333379926e-07 0.008332999999999993 1.5612511283791264e-17" rpy="0 0 0"/>
+      <mass value="1.0275625971116613"/>
+      <inertia ixx="0.000666" iyy="0.001284" izz="0.000666" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.208333 -0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/tl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.208333 -0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/tl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ========================
+       BOTTOM-LEFT WHEEL LINK
+  ========================= -->
+  <link name="bl_wheel_1">
+    <inertial>
+      <origin xyz="-5.551115123125783e-17 0.008332999999999993 0.0" rpy="0 0 0"/>
+      <mass value="1.0275625971116613"/>
+      <inertia ixx="0.000666" iyy="0.001284" izz="0.000666" ixy="0.0" iyz="0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.375 -0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/bl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.375 -0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/bl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ========================
+       TOP-RIGHT WHEEL LINK
+  ========================= -->
+  <link name="tr_wheel_1">
+    <inertial>
+      <origin xyz="-3.33333333379926e-07 -0.008332999999999993 -1.0408340855860843e-17" rpy="0 0 0"/>
+      <mass value="1.0275625971116613"/>
+      <inertia ixx="0.000666" iyy="0.001284" izz="0.000666" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.208333 0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/tr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.208333 0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/tr_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ========================
+       BOTTOM-RIGHT WHEEL LINK
+  ========================= -->
+  <link name="br_wheel_1">
+    <inertial>
+      <origin xyz="-5.551115123125783e-17 -0.008332999999999993 0.0" rpy="0 0 0"/>
+      <mass value="1.0275625971116613"/>
+      <inertia ixx="0.000666" iyy="0.001284" izz="0.000666" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.375 0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/br_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <origin xyz="0.375 0.066667 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="meshes/br_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <!-- ========================
+       JOINTS
+  ========================= -->
+
+  <!-- Flag pole spins around vertical (z) axis, if desired. -->
+  <joint name="pole_base_joint" type="continuous">
+    <origin xyz="-0.291667 0.008333 0.071667" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="pole_1"/>
+    <axis xyz="0.0 0.0 1.0"/>
+  </joint>
+
+  <!-- All wheels share the same axis: (0 1 0) so they spin in parallel. -->
+
+  <joint name="tl_base_joint" type="continuous">
+    <origin xyz="-0.208333 0.066667 0.015" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="tl_wheel_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+
+  <joint name="bl_base_joint" type="continuous">
+    <origin xyz="-0.375 0.066667 0.015" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="bl_wheel_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+
+  <joint name="tr_base_joint" type="continuous">
+    <origin xyz="-0.208333 -0.066667 0.015" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="tr_wheel_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+
+  <joint name="br_base_joint" type="continuous">
+    <origin xyz="-0.375 -0.066667 0.015" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="br_wheel_1"/>
+    <axis xyz="0.0 1.0 0.0"/>
+  </joint>
+
+</robot>
