@@ -155,7 +155,7 @@
     <origin xyz="-0.291667 0.008333 0.071667" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="pole_1"/>
-    <axis xyz="0.0 0.0 1.0"/>
+    <axis xyz="0.0 1.0 0.0"/>
   </joint>
 
   <!-- All wheels share the same axis: (0 1 0) so they spin in parallel. -->
