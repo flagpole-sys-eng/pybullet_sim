@@ -148,14 +148,18 @@
 
   <!-- ========================
        JOINTS
-  ========================= -->
+  ========================
 
-  <!-- Flag pole spins around vertical (z) axis, if desired. -->
-  <joint name="pole_base_joint" type="continuous">
+       The pole (or cart) joint is now limited to ±50° (±0.87266 rad).
+  -->
+
+  <!-- Joint for the flag pole (or cart steering) now has angle limits. -->
+  <joint name="pole_base_joint" type="revolute">
     <origin xyz="-0.291667 0.008333 0.071667" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="pole_1"/>
     <axis xyz="0.0 1.0 0.0"/>
+    <limit lower="-0.87266" upper="0.87266" effort="10.0" velocity="1.0"/>
   </joint>
 
   <!-- All wheels share the same axis: (0 1 0) so they spin in parallel. -->
