@@ -1,6 +1,6 @@
 # Controller Simulation GUI
 
-This project provides a graphical user interface (GUI) for simulating and visualizing the performance of different control strategies on a dynamic system. The GUI supports four types of controllers:
+This project provides a GUI for simulating and visualizing the performance of different control strategies on a dynamic system. The GUI supports four types of controllers:
 
 - **PID**
 - **Pole Placement**
@@ -23,9 +23,9 @@ This project provides a graphical user interface (GUI) for simulating and visual
 
 - **Real-Time Visualization:**  
   The GUI displays:
-  - The pole angle (θ) vs. time.
-  - The cart position (x) vs. time.
-  - The control force (F) vs. time.
+  - The pole angle vs. time.
+  - The cart position vs. time.
+  - The control force vs. time.
   - Additional plots for disturbance and noise.
   - An animation of the cart-pendulum system with a visual disturbance arrow.
 
@@ -39,18 +39,12 @@ Ensure you have the required dependencies installed:
 
 You also need to have the simulation modules (e.g., `PIDSimulator`, `PolePlacementSimulator`, `LQRSimulator`, `NMPCSimulator`) available in your Python path.
 
-Install the required Python packages via pip:
-
-```bash
-pip install numpy matplotlib
-```
-
 ## Usage
 
 1. Run the Python script containing the GUI code.
 2. The GUI window will appear with controls and an animation.
 3. Use the radio buttons to select the desired controller.
-4. Adjust PID parameters using the Kp, Ki, and Kd sliders (only applicable for the PID controller).
+4. Adjust PID parameters using the Kp, Ki, and Kd sliders .
 5. Toggle the disturbance switch and set the amplitude (use negative values for leftward disturbances and positive for rightward disturbances).
 6. Optionally, enable noise and adjust its amplitude.
 7. Click **Start** to begin the simulation. The system state and plots will update in real time.
